@@ -97,16 +97,20 @@ public class Theatre {
                         System.out.print("Enter seat number:");
                         int seat = input.nextInt();
 
-                        if (checkSeat(row, seat)) {
-                            validSeat = false;
-                            bookSeat(row,seat);
-                            System.out.println("Successfully booked row " + row + " seat " + seat + " .");
-                        } else {
+                        if (isSeatAvailable(row,seat)){
+                            if (checkSeat(row, seat)) {
+                                validSeat = false;
+                                bookSeat(row,seat);
+                                System.out.println("Successfully booked row " + row + " seat " + seat + " .");
+                            } else {
+                                System.out.println("Seat is already booked, please choose another seat.");
+                            }
+                        }else {
                             System.out.println("Please enter valid seat number!");
                         }
                     }
                 } else {
-                    System.out.println("Please enter valid seat number!");
+                    System.out.println("Please enter valid row number!");
                 }
 
                 System.out.print("Seat booked successfully.\nDo you want to book another seat (y/n): ");
