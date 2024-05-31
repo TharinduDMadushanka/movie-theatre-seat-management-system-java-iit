@@ -81,10 +81,14 @@ public class Theatre {
 
     public static void checkRow(int input){
 
-        if (input>0 && input<4){
-            System.out.print("Enter seat number:");
-        }else {
-            System.out.println("Invalid row!");
+        boolean gate =true;
+
+        while (gate){
+            if (input>0 && input<4){
+                gate=false;
+            }else {
+                System.out.println("Invalid row!");
+            }
         }
     }
 }
