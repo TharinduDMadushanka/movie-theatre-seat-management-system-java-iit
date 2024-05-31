@@ -24,14 +24,15 @@ public class Theatre {
         menuStuff();
 
         System.out.println("\n\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
-        System.out.println("\t1. Buy a ticket");
+        System.out.println("\t2. Print seating area");
+        System.out.println("\t3. Cancel ticket");
+        System.out.println("\t4. List available seat ");
+        System.out.println("\t5. Save to file");
+        System.out.println("\t6. Load from file");
+        System.out.println("\t7. Print ticket information and total price");
+        System.out.println("\t8. Sort ticket by price");
+        System.out.println("\t0. Quit");
+
+        menuStuff();
     }
 }
