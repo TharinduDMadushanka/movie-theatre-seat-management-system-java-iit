@@ -74,7 +74,9 @@ public class Theatre {
         menuStuff();
         System.out.println();
 
-        System.out.print("");
+        System.out.print("Enter Row number:");
+        int row =input.nextInt();
+        checkRow(row);
     }
 
     public static void checkRow(int input){
