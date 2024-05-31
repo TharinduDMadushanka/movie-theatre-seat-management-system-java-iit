@@ -70,7 +70,8 @@ public class Theatre {
     public static void buyTicket(){
 
         menuStuff();
-        System.out.println("| BUY TICKET |");
+        System.out.println("\n|\t\t\t BUY TICKET\t\t\t |");
         menuStuff();
+        System.out.println();
     }
 }
