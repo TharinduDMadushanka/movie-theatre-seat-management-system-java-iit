@@ -16,6 +16,7 @@ public class Theatre {
             menu();
             System.out.print("\nEnter your option:");
             useChoice = input.nextInt();
+            initializeSeat();
 
             switch (useChoice) {
                 case 1:
