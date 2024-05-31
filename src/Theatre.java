@@ -97,8 +97,8 @@ public class Theatre {
                         System.out.print("Enter seat number:");
                         int seat = input.nextInt();
 
-                        if (isSeatAvailable(row, seat)) {
-                            if (checkSeat(row, seat)) {
+                        if (checkSeat(row, seat)) {
+                            if (isSeatAvailable(row, seat)) {
                                 validSeat = false;
                                 bookSeat(row, seat);
                                 System.out.println("Successfully booked row " + row + " seat " + seat + " .");
