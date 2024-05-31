@@ -12,8 +12,27 @@ public class Theatre {
         int useChoice;
         do {
             menu();
-            System.out.print("Enter your option:");
+            System.out.print("\nEnter your option:");
             useChoice =input.nextInt();
+
+            switch (useChoice){
+                case 1:
+
+                case 2:
+
+                case 3:
+
+                case 4:
+
+                case 5:
+
+                case 6:
+
+                case 7:
+
+                case 8:
+
+            }
 
         }while (useChoice!=0);
 
