@@ -77,12 +77,13 @@ public class Theatre {
         boolean valid = true;
 
         while (valid){
-            System.out.print("Enter Row number:");
+            System.out.print("Enter Row number (1-3):");
             int row = input.nextInt();
 
             if (checkRow(row)){
                 valid=false;
 
+                System.out.println("Row 1->12\tRow 2->16\tRow 3->20");
                 System.out.print("Enter seat number:");
                 int seat= input.nextInt();
             }
