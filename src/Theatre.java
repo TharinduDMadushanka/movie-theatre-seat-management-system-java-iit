@@ -22,5 +22,16 @@ public class Theatre {
         menuStuff();
         System.out.println("\n| \t\tWELCOME TO THE NEW THEATRE\t\t |");
         menuStuff();
+
+        System.out.println("\n1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
+        System.out.println("1. Buy a ticket");
     }
 }
