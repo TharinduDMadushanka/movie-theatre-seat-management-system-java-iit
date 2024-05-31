@@ -130,7 +130,6 @@ public class Theatre {
                 } else {
                     System.out.println("Please enter valid row number!");
                 }
-
             }
         }
     }
