@@ -13,7 +13,7 @@ public class Theatre {
     public static void menuStuff() {
 
         for (int i = 0; i < 30; i++) {
-            System.out.println("-");
+            System.out.print("-");
         }
     }
 
