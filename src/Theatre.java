@@ -8,4 +8,14 @@ public class Theatre {
 
         System.out.println("WELCOME TO THE NEW THEATRE");
     }
+
+    public static void menuStuff(){
+
+        for (int i=0;i<30;i++){
+            System.out.println("-");
+        }
+    }
+    public static void menu(){
+
+    }
 }
