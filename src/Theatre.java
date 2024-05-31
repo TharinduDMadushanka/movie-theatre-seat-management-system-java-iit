@@ -86,6 +86,8 @@ public class Theatre {
                 System.out.println("Row 1->12\tRow 2->16\tRow 3->20");
                 System.out.print("Enter seat number:");
                 int seat= input.nextInt();
+            }else {
+                System.out.println("Please enter valid seat number!");
             }
         }
     }
