@@ -86,6 +86,11 @@ public class Theatre {
                 System.out.println("Row 1->12\tRow 2->16\tRow 3->20");
                 System.out.print("Enter seat number:");
                 int seat= input.nextInt();
+
+                if (checkSeat(row,seat)){
+                    valid=false;
+                    System.out.println("Successfully bookd");
+                }
             }else {
                 System.out.println("Please enter valid seat number!");
             }
@@ -94,5 +99,16 @@ public class Theatre {
 
     public static boolean checkRow(int row) {
         return row>0 && row<4;
+    }
+
+    public static boolean checkSeat(int row,int seat){
+        if (row==1){
+            return seat >0 && seat<12;
+        }else if (row==2){
+            return seat >0 && seat<16;
+        }else if (row==3){
+            return seat>0 && seat<20;
+        }
+        return false;
     }
 }
