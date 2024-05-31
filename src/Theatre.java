@@ -12,7 +12,7 @@ public class Theatre {
 
     public static void menuStuff() {
 
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 40; i++) {
             System.out.print("-");
         }
     }
@@ -20,7 +20,7 @@ public class Theatre {
     public static void menu() {
 
         menuStuff();
-        System.out.println("\n| WELCOME TO THE NEW THEATRE |");
+        System.out.println("\n| \t\tWELCOME TO THE NEW THEATRE\t\t |");
         menuStuff();
     }
 }
