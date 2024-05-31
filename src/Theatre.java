@@ -90,7 +90,6 @@ public class Theatre {
                 valid = false;
             } else {
                 System.out.println("Please enter valid row number!");
-                return;
             }
         }
     }
