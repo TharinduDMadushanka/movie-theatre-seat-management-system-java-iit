@@ -1,12 +1,22 @@
+import java.util.Scanner;
+
 public class Theatre {
 
+    static Scanner input =new Scanner(System.in);
     static int[] row1 = new int[12];
     static int[] row2 = new int[16];
     static int[] row3 = new int[20];
 
     public static void main(String[] args) {
 
-        menu();
+        int useChoice;
+        do {
+            menu();
+            System.out.print("Enter your option:");
+            useChoice =input.nextInt();
+
+        }while (useChoice!=0);
+
 
     }
 
