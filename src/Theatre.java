@@ -20,7 +20,7 @@ public class Theatre {
     public static void menu() {
 
         menuStuff();
-        System.out.println("| WELCOME TO THE NEW THEATRE |");
+        System.out.println("\n| WELCOME TO THE NEW THEATRE |");
         menuStuff();
     }
 }
