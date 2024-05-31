@@ -79,11 +79,19 @@ public class Theatre {
         while (valid){
             System.out.print("Enter Row number:");
             int row = input.nextInt();
-            checkRow(row);
+
+            int rowValid=checkRow(row);
+
+            if (rowValid!=1){
+                System.out.println("Please");
+                continue;
+            }
+
+            System.out.print("Enter seat number:");
         }
     }
 
-    public static void checkRow(int row) {
+    public static int checkRow(int row) {
 
         boolean valid = true;
         while (valid) {
@@ -91,8 +99,9 @@ public class Theatre {
                 valid = false;
             } else {
                 System.out.println("Please enter valid row number!");
-                return;
+                continue;
             }
         }
+        return -1;
     }
 }
