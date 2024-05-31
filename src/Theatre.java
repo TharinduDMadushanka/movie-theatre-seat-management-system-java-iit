@@ -67,28 +67,39 @@ public class Theatre {
         menuStuff();
     }
 
-    public static void buyTicket(){
+    public static void buyTicket() {
 
         menuStuff();
         System.out.println("\n|\t\t\t\t BUY TICKET\t\t\t\t |");
         menuStuff();
         System.out.println();
 
-        System.out.print("Enter Row number:");
-        int row =input.nextInt();
-        checkRow(row);
-    }
+        boolean valid = true;
+        while (valid) {
+            System.out.print("Enter Row number:");
+            int row = input.nextInt();
 
-    public static void checkRow(int input){
-
-        boolean gate =true;
-
-        while (gate){
-            if (input>0 && input<4){
-                gate=false;
+            if (row>0 && row<4){
+                valid=false;
             }else {
-                System.out.println("Invalid row!");
+                System.out.println("Please enter valid row number!");
             }
         }
+
+    }
+
+    public static void checkRow(int input) {
+
+        boolean gate = true;
+
+        while (gate) {
+            if (input > 0 && input < 4) {
+                gate = false;
+            } else {
+                System.out.println("Invalid row!");
+                return;
+            }
+        }
+
     }
 }
