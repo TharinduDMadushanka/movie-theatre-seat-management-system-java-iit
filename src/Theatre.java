@@ -83,7 +83,6 @@ public class Theatre {
             if (checkRow(row)) {
                 validRow = false;
 
-
                 System.out.println("Row 1->12\tRow 2->16\tRow 3->20");
 
                 boolean validSeat = true;
@@ -101,6 +100,22 @@ public class Theatre {
                 }
             } else {
                 System.out.println("Please enter valid seat number!");
+            }
+
+            System.out.print("Student has been added successfully.\nDo you want to add a new student (y/n): ");
+
+
+            boolean validAnswer = false;
+            while (!validAnswer) {
+                char inputDataAgain = input.next().toLowerCase().charAt(0);
+                if (inputDataAgain == 'y') {
+                    validAnswer = true;
+                } else if (inputDataAgain == 'n') {
+                    validAnswer = true;
+                    validRow = false;
+                } else {
+                    System.out.print("Invalid input. Please enter (y/n) :");
+                }
             }
         }
     }
