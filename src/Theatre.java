@@ -80,28 +80,16 @@ public class Theatre {
             System.out.print("Enter Row number:");
             int row = input.nextInt();
 
-            int rowValid=checkRow(row);
+            if (checkRow(row)){
+                valid=false;
 
-            if (rowValid!=1){
-                System.out.println("Please");
-                continue;
+                System.out.print("Enter seat number:");
+                int seat= input.nextInt();
             }
-
-            System.out.print("Enter seat number:");
         }
     }
 
-    public static int checkRow(int row) {
-
-        boolean valid = true;
-        while (valid) {
-            if (row > 0 && row < 4) {
-                valid = false;
-            } else {
-                System.out.println("Please enter valid row number!");
-                continue;
-            }
-        }
-        return -1;
+    public static boolean checkRow(int row) {
+        return row>0 && row<4;
     }
 }
