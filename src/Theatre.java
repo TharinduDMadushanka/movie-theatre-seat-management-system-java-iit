@@ -89,7 +89,9 @@ public class Theatre {
 
                 if (checkSeat(row,seat)){
                     valid=false;
-                    System.out.println("Successfully bookd");
+                    System.out.println("Successfully booked row "+row+" seat "+seat+" .");
+                }else {
+                    System.out.println("Please enter valid seat number!");
                 }
             }else {
                 System.out.println("Please enter valid seat number!");
