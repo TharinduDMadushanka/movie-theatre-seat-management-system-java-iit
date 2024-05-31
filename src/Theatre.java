@@ -9,6 +9,8 @@ public class Theatre {
 
     public static void main(String[] args) {
 
+
+
         int useChoice;
         do {
             menu();
@@ -139,5 +141,18 @@ public class Theatre {
             return seat > 0 && seat <= 20;
         }
         return false;
+    }
+
+    public static void initializeSeat(){
+
+        for (int i=0;i< row1.length;i++){
+            row1[i]=0;
+        }
+        for (int i=0;i< row2.length;i++){
+            row2[i]=0;
+        }
+        for (int i=0;i< row3.length;i++){
+            row3[i]=0;
+        }
     }
 }
