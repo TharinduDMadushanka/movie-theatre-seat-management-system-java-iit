@@ -105,11 +105,11 @@ public class Theatre {
 
     public static boolean checkSeat(int row,int seat){
         if (row==1){
-            return seat >0 && seat<12;
+            return seat >0 && seat<=12;
         }else if (row==2){
-            return seat >0 && seat<16;
+            return seat >0 && seat<=16;
         }else if (row==3){
-            return seat>0 && seat<20;
+            return seat>0 && seat<=20;
         }
         return false;
     }
