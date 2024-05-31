@@ -10,7 +10,6 @@ public class Theatre {
     public static void main(String[] args) {
 
 
-
         int useChoice;
         do {
             menu();
@@ -77,9 +76,9 @@ public class Theatre {
         menuStuff();
         System.out.println();
 
-        boolean continueBooking =true;
+        boolean continueBooking = true;
 
-        while (continueBooking){
+        while (continueBooking) {
 
             boolean validRow = true;
 
@@ -100,7 +99,7 @@ public class Theatre {
 
                         if (checkSeat(row, seat)) {
                             validSeat = false;
-
+                            bookSeat(row,seat);
                             System.out.println("Successfully booked row " + row + " seat " + seat + " .");
                         } else {
                             System.out.println("Please enter valid seat number!");
@@ -118,10 +117,10 @@ public class Theatre {
                     char inputDataAgain = input.next().toLowerCase().charAt(0);
                     if (inputDataAgain == 'y') {
                         validAnswer = true;
-                        validRow=false;
+                        validRow = false;
                     } else if (inputDataAgain == 'n') {
                         validAnswer = true;
-                        continueBooking=false;
+                        continueBooking = false;
                     } else {
                         System.out.print("Invalid input. Please enter (y/n) :");
                     }
@@ -147,31 +146,31 @@ public class Theatre {
         }
     }
 
-    public static void initializeSeat(){
+    public static void initializeSeat() {
 
-        for (int i=0;i< row1.length;i++){
-            row1[i]=0;
+        for (int i = 0; i < row1.length; i++) {
+            row1[i] = 0;
         }
-        for (int i=0;i< row2.length;i++){
-            row2[i]=0;
+        for (int i = 0; i < row2.length; i++) {
+            row2[i] = 0;
         }
-        for (int i=0;i< row3.length;i++){
-            row3[i]=0;
+        for (int i = 0; i < row3.length; i++) {
+            row3[i] = 0;
         }
     }
 
-    public static void bookSeat(int row,int seat){
-        switch (row){
+    public static void bookSeat(int row, int seat) {
+        switch (row) {
             case 1:
-                row1[seat-1]=1;
+                row1[seat - 1] = 1;
                 break;
 
             case 2:
-                row2[seat-1]=1;
+                row2[seat - 1] = 1;
                 break;
 
             case 3:
-                row3[seat-1]=1;
+                row3[seat - 1] = 1;
                 break;
         }
     }
