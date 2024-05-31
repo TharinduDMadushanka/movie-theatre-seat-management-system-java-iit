@@ -73,5 +73,16 @@ public class Theatre {
         System.out.println("\n|\t\t\t\t BUY TICKET\t\t\t\t |");
         menuStuff();
         System.out.println();
+
+        System.out.print("");
+    }
+
+    public static void checkRow(int input){
+
+        if (input>0 && input<4){
+            System.out.print("Enter seat number:");
+        }else {
+            System.out.println("Invalid row!");
+        }
     }
 }
