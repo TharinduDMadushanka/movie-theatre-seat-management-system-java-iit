@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Theatre {
 
-    static Scanner input =new Scanner(System.in);
+    static Scanner input = new Scanner(System.in);
     static int[] row1 = new int[12];
     static int[] row2 = new int[16];
     static int[] row3 = new int[20];
@@ -13,10 +13,12 @@ public class Theatre {
         do {
             menu();
             System.out.print("\nEnter your option:");
-            useChoice =input.nextInt();
+            useChoice = input.nextInt();
 
-            switch (useChoice){
+            switch (useChoice) {
                 case 1:
+                    buyTicket();
+                    break;
 
                 case 2:
 
@@ -34,7 +36,7 @@ public class Theatre {
 
             }
 
-        }while (useChoice!=0);
+        } while (useChoice != 0);
 
 
     }
@@ -62,6 +64,13 @@ public class Theatre {
         System.out.println("\t8. Sort ticket by price");
         System.out.println("\t0. Quit");
 
+        menuStuff();
+    }
+
+    public static void buyTicket(){
+
+        menuStuff();
+        System.out.println("| BUY TICKET |");
         menuStuff();
     }
 }
