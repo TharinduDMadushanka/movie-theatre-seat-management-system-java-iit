@@ -102,7 +102,7 @@ public class Theatre {
                 System.out.println("Please enter valid seat number!");
             }
 
-            System.out.print("Student has been added successfully.\nDo you want to add a new student (y/n): ");
+            System.out.print("Seat booked successfully.\nDo you want to book another seat (y/n): ");
 
 
             boolean validAnswer = false;
