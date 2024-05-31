@@ -79,27 +79,25 @@ public class Theatre {
             System.out.print("Enter Row number:");
             int row = input.nextInt();
 
-            if (row>0 && row<4){
-                valid=false;
-            }else {
+            if (row > 0 && row < 4) {
+                valid = false;
+            } else {
                 System.out.println("Please enter valid row number!");
             }
         }
 
+
     }
 
-    public static void checkRow(int input) {
+    public static void checkRow(int row) {
 
-        boolean gate = true;
-
-        while (gate) {
-            if (input > 0 && input < 4) {
-                gate = false;
+        boolean valid = true;
+        while (valid) {
+            if (row > 0 && row < 4) {
+                valid = false;
             } else {
-                System.out.println("Invalid row!");
-                return;
+                System.out.println("Please enter valid row number!");
             }
         }
-
     }
 }
