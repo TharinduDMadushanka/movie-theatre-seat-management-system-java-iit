@@ -97,15 +97,33 @@ public class Theatre {
                         System.out.print("Enter seat number:");
                         int seat = input.nextInt();
 
-                        if (isSeatAvailable(row,seat)){
+                        if (isSeatAvailable(row, seat)) {
                             if (checkSeat(row, seat)) {
                                 validSeat = false;
-                                bookSeat(row,seat);
+                                bookSeat(row, seat);
                                 System.out.println("Successfully booked row " + row + " seat " + seat + " .");
+
+                                System.out.print("\nDo you want to book another seat (y/n): ");
+
+
+                                boolean validAnswer = false;
+                                while (!validAnswer) {
+                                    char inputDataAgain = input.next().toLowerCase().charAt(0);
+                                    if (inputDataAgain == 'y') {
+                                        validAnswer = true;
+                                        validRow = false;
+                                    } else if (inputDataAgain == 'n') {
+                                        validAnswer = true;
+                                        continueBooking = false;
+                                    } else {
+                                        System.out.print("Invalid input. Please enter (y/n) :");
+                                    }
+                                }
+
                             } else {
                                 System.out.println("Seat is already booked, please choose another seat.");
                             }
-                        }else {
+                        } else {
                             System.out.println("Please enter valid seat number!");
                         }
                     }
@@ -113,22 +131,6 @@ public class Theatre {
                     System.out.println("Please enter valid row number!");
                 }
 
-                System.out.print("Seat booked successfully.\nDo you want to book another seat (y/n): ");
-
-
-                boolean validAnswer = false;
-                while (!validAnswer) {
-                    char inputDataAgain = input.next().toLowerCase().charAt(0);
-                    if (inputDataAgain == 'y') {
-                        validAnswer = true;
-                        validRow = false;
-                    } else if (inputDataAgain == 'n') {
-                        validAnswer = true;
-                        continueBooking = false;
-                    } else {
-                        System.out.print("Invalid input. Please enter (y/n) :");
-                    }
-                }
             }
         }
     }
@@ -179,16 +181,16 @@ public class Theatre {
         }
     }
 
-    public static boolean isSeatAvailable(int row,int seat){
-        switch (row){
+    public static boolean isSeatAvailable(int row, int seat) {
+        switch (row) {
             case 1:
-                return row1[seat-1]==0;
+                return row1[seat - 1] == 0;
 
             case 2:
-                return row2[seat-1]==0;
+                return row2[seat - 1] == 0;
 
             case 3:
-                return row3[seat-1]==0;
+                return row3[seat - 1] == 0;
 
             default:
                 return false;
