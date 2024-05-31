@@ -174,4 +174,20 @@ public class Theatre {
                 break;
         }
     }
+
+    public static boolean isSeatAvailable(int row,int seat){
+        switch (row){
+            case 1:
+                return row1[seat-1]==0;
+
+            case 2:
+                return row2[seat-1]==0;
+
+            case 3:
+                return row3[seat-1]==0;
+
+            default:
+                return false;
+        }
+    }
 }
