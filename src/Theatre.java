@@ -74,47 +74,53 @@ public class Theatre {
         menuStuff();
         System.out.println();
 
-        boolean validRow = true;
+        boolean continueBooking =true;
 
-        while (validRow) {
-            System.out.print("Enter Row number (1-3):");
-            int row = input.nextInt();
+        while (continueBooking){
 
-            if (checkRow(row)) {
-                validRow = false;
+            boolean validRow = true;
 
-                System.out.println("Row 1->12\tRow 2->16\tRow 3->20");
+            while (validRow) {
+                System.out.print("Enter Row number (1-3):");
+                int row = input.nextInt();
 
-                boolean validSeat = true;
-                while (validSeat) {
-
-                    System.out.print("Enter seat number:");
-                    int seat = input.nextInt();
-
-                    if (checkSeat(row, seat)) {
-                        validSeat = false;
-                        System.out.println("Successfully booked row " + row + " seat " + seat + " .");
-                    } else {
-                        System.out.println("Please enter valid seat number!");
-                    }
-                }
-            } else {
-                System.out.println("Please enter valid seat number!");
-            }
-
-            System.out.print("Seat booked successfully.\nDo you want to book another seat (y/n): ");
-
-
-            boolean validAnswer = false;
-            while (!validAnswer) {
-                char inputDataAgain = input.next().toLowerCase().charAt(0);
-                if (inputDataAgain == 'y') {
-                    validAnswer = true;
-                } else if (inputDataAgain == 'n') {
-                    validAnswer = true;
+                if (checkRow(row)) {
                     validRow = false;
+
+                    System.out.println("Row 1->12\tRow 2->16\tRow 3->20");
+
+                    boolean validSeat = true;
+                    while (validSeat) {
+
+                        System.out.print("Enter seat number:");
+                        int seat = input.nextInt();
+
+                        if (checkSeat(row, seat)) {
+                            validSeat = false;
+                            System.out.println("Successfully booked row " + row + " seat " + seat + " .");
+                        } else {
+                            System.out.println("Please enter valid seat number!");
+                        }
+                    }
                 } else {
-                    System.out.print("Invalid input. Please enter (y/n) :");
+                    System.out.println("Please enter valid seat number!");
+                }
+
+                System.out.print("Seat booked successfully.\nDo you want to book another seat (y/n): ");
+
+
+                boolean validAnswer = false;
+                while (!validAnswer) {
+                    char inputDataAgain = input.next().toLowerCase().charAt(0);
+                    if (inputDataAgain == 'y') {
+                        validAnswer = true;
+                        validRow=false;
+                    } else if (inputDataAgain == 'n') {
+                        validAnswer = true;
+                        continueBooking=false;
+                    } else {
+                        System.out.print("Invalid input. Please enter (y/n) :");
+                    }
                 }
             }
         }
