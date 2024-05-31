@@ -6,7 +6,7 @@ public class Theatre {
 
     public static void main(String[] args) {
 
-        System.out.println("WELCOME TO THE NEW THEATRE");
+
     }
 
     public static void menuStuff() {
@@ -19,7 +19,7 @@ public class Theatre {
     public static void menu() {
 
         menuStuff();
-        System.out.println("|OPTION MEU|");
+        System.out.println("| WELCOME TO THE NEW THEATRE |");
         menuStuff();
     }
 }
