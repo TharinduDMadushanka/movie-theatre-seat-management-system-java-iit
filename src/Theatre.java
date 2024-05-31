@@ -100,6 +100,7 @@ public class Theatre {
 
                         if (checkSeat(row, seat)) {
                             validSeat = false;
+
                             System.out.println("Successfully booked row " + row + " seat " + seat + " .");
                         } else {
                             System.out.println("Please enter valid seat number!");
@@ -134,14 +135,16 @@ public class Theatre {
     }
 
     public static boolean checkSeat(int row, int seat) {
-        if (row == 1) {
-            return seat > 0 && seat <= 12;
-        } else if (row == 2) {
-            return seat > 0 && seat <= 16;
-        } else if (row == 3) {
-            return seat > 0 && seat <= 20;
+        switch (row) {
+            case 1:
+                return seat > 0 && seat <= 12;
+            case 2:
+                return seat > 0 && seat <= 16;
+            case 3:
+                return seat > 0 && seat <= 20;
+            default:
+                return false;
         }
-        return false;
     }
 
     public static void initializeSeat(){
@@ -154,6 +157,22 @@ public class Theatre {
         }
         for (int i=0;i< row3.length;i++){
             row3[i]=0;
+        }
+    }
+
+    public static void bookSeat(int row,int seat){
+        switch (row){
+            case 1:
+                row1[seat-1]=1;
+                break;
+
+            case 2:
+                row2[seat-1]=1;
+                break;
+
+            case 3:
+                row3[seat-1]=1;
+                break;
         }
     }
 }
