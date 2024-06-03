@@ -140,6 +140,17 @@ public class Theatre {
         for (int i=0;i< row1.length;i++){
             System.out.print("O ");
         }
+        System.out.println();
+
+        for (int i=0;i< row2.length;i++){
+            System.out.print("O ");
+        }
+        System.out.println();
+
+        for (int i=0;i< row3.length;i++){
+            System.out.print("O ");
+        }
+        System.out.println();
     }
 
     public static boolean checkRow(int row) {
