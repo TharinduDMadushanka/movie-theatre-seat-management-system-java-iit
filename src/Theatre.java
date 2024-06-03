@@ -136,23 +136,21 @@ public class Theatre {
         }
     }
 
-    public static void printSeat(int row,int seat){
-        for (int i=0;i< row1.length;i++){
-            if (isSeatAvailable(row,seat)){
+    public static void printSeat(){
+        System.out.println("**************");
+        System.out.println("** STAGE **");
+        System.out.println("**************");
+        printRow(row1);
+        printRow(row2);
+        printRow(row3);
+    }
+
+    public static void printRow(int[] row){
+        for (int seat: row){
+            if (seat==0){
                 System.out.print("O ");
-            }else {
-                System.out.print("X");
-            }
-        }
-        System.out.println();
-
-        for (int i=0;i< row2.length;i++){
-            System.out.print("O ");
-        }
-        System.out.println();
-
-        for (int i=0;i< row3.length;i++){
-            System.out.print("O ");
+            }else
+                System.out.println("X ");
         }
         System.out.println();
     }
