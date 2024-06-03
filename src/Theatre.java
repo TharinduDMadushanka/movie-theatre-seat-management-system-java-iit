@@ -136,9 +136,13 @@ public class Theatre {
         }
     }
 
-    public static void printSeat(){
+    public static void printSeat(int row,int seat){
         for (int i=0;i< row1.length;i++){
-            System.out.print("O ");
+            if (isSeatAvailable(row,seat)){
+                System.out.print("O ");
+            }else {
+                System.out.print("X");
+            }
         }
         System.out.println();
 
