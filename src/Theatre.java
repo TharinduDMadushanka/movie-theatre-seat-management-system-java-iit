@@ -150,7 +150,7 @@ public class Theatre {
             if (seat==0){
                 System.out.print("O ");
             }else
-                System.out.println("X ");
+                System.out.print("X ");
         }
         System.out.println();
     }
