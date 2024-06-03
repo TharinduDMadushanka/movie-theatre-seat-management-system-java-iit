@@ -9,13 +9,13 @@ public class Theatre {
 
     public static void main(String[] args) {
 
-
+        initializeSeat();
         int useChoice;
         do {
             menu();
             System.out.print("\nEnter your option:");
             useChoice = input.nextInt();
-            initializeSeat();
+
 
             switch (useChoice) {
                 case 1:
