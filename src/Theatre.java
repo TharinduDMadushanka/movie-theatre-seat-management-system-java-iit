@@ -134,6 +134,12 @@ public class Theatre {
         }
     }
 
+    public static void printSeat(){
+        for (int i=0;i< row1.length;i++){
+            System.out.print("O ");
+        }
+    }
+
     public static boolean checkRow(int row) {
         return row > 0 && row < 4;
     }
