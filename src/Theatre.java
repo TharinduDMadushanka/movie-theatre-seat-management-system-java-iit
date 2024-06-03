@@ -23,6 +23,8 @@ public class Theatre {
                     break;
 
                 case 2:
+                    printSeat();
+                    break;
 
                 case 3:
 
